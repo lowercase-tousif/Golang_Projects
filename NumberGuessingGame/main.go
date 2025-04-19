@@ -14,8 +14,8 @@ func welcomeMessage() {
 }
 
 // Secret Number Generator
-func generateSecretNumber() int{
-	var secretNumber int 
+func generateSecretNumber() int {
+	var secretNumber int
 
 	secretNumber = rand.Intn(11) + 1
 	return secretNumber
@@ -27,25 +27,34 @@ func mainGameLoop() {
 	var attempt int = 0
 	var guess int
 	for {
-		fmt.Println("Enter your guess: ")
+		fmt.Print("Enter your guess: ")
 		fmt.Scan(&guess)
 
 		attempt++
 
 		var secretNumber int = generateSecretNumber()
 
+		// Error Handling
+		if guess < 0 || guess > 10 {
+			fmt.Print("\n\n\t\t\t\t ❗❗ Guess Range is (0 - 10) ❗❗\t\t\t\t\n\n")
+			fmt.Print("\n\n\t\t\t\t ❌❌ Game Over ❌❌\t\t\t\t\n\n")
+			break
+		}
+
+		// Main Logic
 		if guess < secretNumber {
 			fmt.Println("Too low try again!")
 		} else if guess > secretNumber {
 			fmt.Println("Too high try again!")
 		} else {
 			fmt.Print("\n\n\t\t\t\t You have successfully guessed the number✨\t\t\t\t\n\n")
-			break;
+			break
 		}
 
-		if attempt == 3{
+		// Checking the attempt value
+		if attempt == 3 {
 			fmt.Print("\n\n\t\t\t\t ❌❌ Game Over ❌❌\t\t\t\t\n\n")
-			break;
+			break
 		}
 	}
 }
