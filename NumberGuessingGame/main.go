@@ -8,6 +8,9 @@ import (
 // Welcome Message
 func welcomeMessage() {
 	fmt.Print("\n\n\t\t\t Welcome to the Simple Number Guessing Game\t\t\t\n\n")
+	fmt.Print("\t\t\t You have only 3 guesses left\t\t\t\n\n")
+	fmt.Print("\t\t\t Number is between 1-10 \t\t\t\n\n")
+
 }
 
 // Secret Number Generator
@@ -36,12 +39,12 @@ func mainGameLoop() {
 		} else if guess > secretNumber {
 			fmt.Println("Too high try again!")
 		} else {
-			fmt.Println("You have successfully guessed the number✨")
+			fmt.Print("\n\n\t\t\t\t You have successfully guessed the number✨\t\t\t\t\n\n")
 			break;
 		}
 
 		if attempt == 3{
-			fmt.Println("Game Ended")
+			fmt.Print("\n\n\t\t\t\t ❌❌ Game Over ❌❌\t\t\t\t\n\n")
 			break;
 		}
 	}
