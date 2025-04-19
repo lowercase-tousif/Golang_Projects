@@ -1,12 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 // Welcome Message
 func welcomeMessage() {
 	fmt.Print("\n\n\t\t\t Welcome to the Simple Number Guessing Game\t\t\t\n\n")
 }
 
+// Secret Number Generator
+func generateSecretNumber() int{
+	var secretNumber int 
+
+	secretNumber = rand.Intn(11) + 1
+	return secretNumber
+}
 
 // Main Game Function
 func mainGameLoop() {
@@ -19,7 +29,7 @@ func mainGameLoop() {
 
 		attempt++
 
-		var secretNumber = ...
+		var secretNumber int = generateSecretNumber()
 
 		if guess < secretNumber {
 			fmt.Println("Too low try again!")
@@ -39,4 +49,5 @@ func mainGameLoop() {
 
 func main() {
 	welcomeMessage()
+	mainGameLoop()
 }
