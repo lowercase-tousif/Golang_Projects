@@ -7,6 +7,8 @@ func welcomeMessage() {
 	fmt.Print("\n\n\t\t\t Welcome to the Simple Number Guessing Game\t\t\t\n\n")
 }
 
+
+// Main Game Function
 func mainGameLoop() {
 
 	var attempt int = 0
