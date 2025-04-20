@@ -26,14 +26,14 @@ func mainGameLoop() {
 
 	var attempt int = 0
 	var guess int
+	var secretNumber int = generateSecretNumber()
+
 	for {
 		fmt.Print("Enter your guess: ")
 		fmt.Scan(&guess)
 
 		attempt++
 
-		var secretNumber int = generateSecretNumber()
-		fmt.Println(secretNumber)
 		// Error Handling
 		if guess < 0 || guess > 10 {
 			fmt.Print("\n\n\t\t\t\t ❗❗ Guess Range is (0 - 10) ❗❗\t\t\t\t\n\n")
