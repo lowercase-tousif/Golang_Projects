@@ -17,7 +17,7 @@ func welcomeMessage() {
 func generateSecretNumber() int {
 	var secretNumber int
 
-	secretNumber = rand.Intn(11) + 1
+	secretNumber = rand.Intn(10) + 1
 	return secretNumber
 }
 
@@ -33,7 +33,7 @@ func mainGameLoop() {
 		attempt++
 
 		var secretNumber int = generateSecretNumber()
-
+		fmt.Println(secretNumber)
 		// Error Handling
 		if guess < 0 || guess > 10 {
 			fmt.Print("\n\n\t\t\t\t ❗❗ Guess Range is (0 - 10) ❗❗\t\t\t\t\n\n")
