@@ -3,5 +3,5 @@ package message
 import "fmt"
 
 func WelcomeMessage() {
-	fmt.Println("\t\tWelcome to the student management project 🎓")
+	fmt.Println("\n\n\t\tWelcome to the student management project 🎓\t\t")
 }
