@@ -1,0 +1,3 @@
+module student-management
+
+go 1.24.2
