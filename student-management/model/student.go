@@ -7,4 +7,4 @@ type Student struct {
 	Hobbies [3]string
 }
 
-var students []Student
+var Students []Student
