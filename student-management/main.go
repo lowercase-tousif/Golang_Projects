@@ -1,9 +1,11 @@
 package main
 
 import (
-	"student-management/message";
+	"student-management/handler"
+	"student-management/message"
 )
 
 func main() {
 	message.WelcomeMessage()
+	handler.Menu()
 }
